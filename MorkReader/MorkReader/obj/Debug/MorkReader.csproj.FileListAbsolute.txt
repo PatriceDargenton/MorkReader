@@ -1,0 +1,6 @@
+D:\4n6Soft\github\MorkReader\MorkReader\MorkReader\obj\Debug\MorkReader.csproj.AssemblyReference.cache
+D:\4n6Soft\github\MorkReader\MorkReader\MorkReader\obj\Debug\MorkReader.csproj.CoreCompileInputs.cache
+D:\4n6Soft\github\MorkReader\MorkReader\MorkReader\bin\Debug\MorkReader.dll
+D:\4n6Soft\github\MorkReader\MorkReader\MorkReader\bin\Debug\MorkReader.pdb
+D:\4n6Soft\github\MorkReader\MorkReader\MorkReader\obj\Debug\MorkReader.dll
+D:\4n6Soft\github\MorkReader\MorkReader\MorkReader\obj\Debug\MorkReader.pdb
