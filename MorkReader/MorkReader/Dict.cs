@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -197,15 +198,19 @@ namespace _4n6MorkReader
         ///             if the dictionaries are empty or the value could not be found </exception>
         public static string dereference(string id, IList<Dict> dicts, ScopeTypes scope)
         {
-            if (dicts.Count == 0)
+            //if (dicts.Count == 0)
+            if (dicts == null || dicts.Count == 0)
             {
                 return ExceptionManager.createString(id, new Exception("Cannot dereference IDs without dictionaries"));
             }
-            string dereference = null;
+            //string dereference = null;
             foreach (Dict dict in dicts)
             {
                 if (dict.DefaultScope == scope)
                 {
+                    var value = dict.dereference(id);
+                    if (value != null) return value;
+                    /*
                     dereference = dict.dereference(id);
                     if (!string.ReferenceEquals(dereference, null))
                     {
@@ -214,9 +219,15 @@ namespace _4n6MorkReader
                     else
                     {
                     }
+                    */
                 }
             }
-            return ExceptionManager.createString(id, new Exception("Dictionary could not dereference key: " + id + " in scope " + scope));
+
+            var returnValue = id + " (unresolved in scope : " + scope + ")";
+            Debug.WriteLine("Warning dereference: " + returnValue);
+            return returnValue; 
+
+            //return ExceptionManager.createString(id, new Exception("Dictionary could not dereference key: " + id + " in scope " + scope));
         }
 
 

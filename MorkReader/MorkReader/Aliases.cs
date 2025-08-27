@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -92,7 +93,13 @@ namespace _4n6MorkReader
             }
             else
             {
-                string refid = aliasStr.Substring(1, aliasStr.IndexOf('^', 2) - 1);
+                //string refid = aliasStr.Substring(1, aliasStr.IndexOf('^', 2) - 1);
+                int len = aliasStr.IndexOf('^', 2) - 1;
+                string refid;
+                refid = aliasStr;
+                if (len >= 0) refid = aliasStr.Substring(1, len);
+                else Debug.WriteLine("Warning: " + aliasStr + ": len=" + len);
+
                 string id = refid;
                 string valueref = aliasStr.SubstringSpecial(aliasStr.IndexOf('^', 2), aliasStr.Length - 1);
                 if (id.StartsWith("^", StringComparison.Ordinal))
@@ -130,16 +137,15 @@ namespace _4n6MorkReader
         }
         public virtual string getValue(string id)
         {
-            try
-            {
-                Alias alias = dict[id.Trim()];
-                if (alias != null)
-                    return alias.Value;
-            }
-            catch (Exception ex)
-            {
-                
-            }
+            //try
+            //{
+                //Alias alias = dict[id.Trim()];
+                var idt = id.Trim();
+                if (!dict.ContainsKey(idt)) return null;
+                var alias = dict[idt];
+                if (alias != null) return alias.Value;
+            //}
+            //catch (Exception ex) { }
             return null;
         }
         public virtual Alias getAlias(string id)

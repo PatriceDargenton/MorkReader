@@ -10,6 +10,7 @@ namespace _4n6MorkReader
     {
         public static string SubstringSpecial(this string self, int start, int end)
         {
+            if (start < 0) return self;
             return self.Substring(start, end - start);
         }
         public static bool StartsWith(this string self, string prefix, int toffset)
