@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorkReader", "MorkReader\MorkReader.csproj", "{F850EBA5-4E8C-4B16-934D-6EA852BDB7F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorkTest", "MorkTest\MorkTest.csproj", "{61D45D1F-2DC4-427A-B692-01BC19142D5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{F850EBA5-4E8C-4B16-934D-6EA852BDB7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F850EBA5-4E8C-4B16-934D-6EA852BDB7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F850EBA5-4E8C-4B16-934D-6EA852BDB7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D45D1F-2DC4-427A-B692-01BC19142D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D45D1F-2DC4-427A-B692-01BC19142D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D45D1F-2DC4-427A-B692-01BC19142D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D45D1F-2DC4-427A-B692-01BC19142D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CCC2EBF-8C92-4053-BF01-5ADDF05C6DA0}
 	EndGlobalSection
 EndGlobal
