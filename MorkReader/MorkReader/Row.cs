@@ -16,6 +16,7 @@ namespace _4n6MorkReader
     /// </summary>
     public class Row
     {
+        public Dictionary<string, string> XmlCells { get; set; } = new Dictionary<string, string>();
 
         /// <summary>
         /// The identifier of the row </summary>

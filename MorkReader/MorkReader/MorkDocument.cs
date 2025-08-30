@@ -29,7 +29,7 @@ namespace _4n6MorkReader
 
         /// <summary>
         /// Internal container for Tables </summary>
-        private IList<Table> tables = new List<Table>();
+        public IList<Table> tables = new List<Table>();
 
         /// <summary>
         /// Creata a new Mork Document using the given content

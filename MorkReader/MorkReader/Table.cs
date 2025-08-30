@@ -14,6 +14,7 @@ namespace _4n6MorkReader
 	/// </summary>
 	public class Table
     {
+        public string XmlName { get; set; }
 
         /// <summary>
         /// The (probably numeric) table identifier </summary>
